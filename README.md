@@ -22,6 +22,10 @@ Model :
 * Handiling such a large amount of compressed data (500 GB nearly) with the limited resources for processing.
 * Using custom implementation when the data don't fit into ram.
 * Using parallel programming to inhance the speed for feature extraction.
+
+## What's more to do??
+* Using bigram feature extractor for .bytes files.
+* Improving feature extraction for .asm files by using domain knowledge.
    
    
    
