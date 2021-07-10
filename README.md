@@ -10,23 +10,27 @@
 ## Approch used : 
 
 * Feature extraction for Bytes files : 
-        Since the  bytes files contains only hexadecimal number system values. So I used bag of words for Bag of words for feature extraction.
-* Feature extraction for .asm files : 
-        I again used custom Bag of word fo feature extaction. First I cleaned the content of .asm files on the basis of literature than implemented feature extraction over it. 
+     * Since the  bytes files contains only hexadecimal number system values. So I used bag of words for Bag of words for feature extraction for both unigram and bigram features.
+     * The numbers of bigram feature was more than 31k so truncated SVD algorithm was used for dimentionality reduction.
         
+       
+* Feature extraction for .asm files : 
+     * I again used custom Bag of word fo feature extaction. First I cleaned the content of .asm files on the basis of literature than implemented feature extraction over it.
+     * Image based pixel level feature extraction for .asm files. ( This idea is derived from top submissin of kaggle.) [video](https://www.youtube.com/watch?v=VLQTRlLGz5Y#t=13m11s)
+
+* Feature Selection.
+     * I have used lightGBM feature importance for the feature selection method.
+               
 Model : 
-  All the machine learning models were trid for the classification task on .bytes and .asm files seperatly and later combining them to see the results.
+    * All the machine learning models were trid for the classification task on .bytes and .asm files seperatly and later combining them to see the results.
+    * LightGBM performed best giving LOGLOSS : 0.009.
   
 ## What I learnt from this task?
 
-* Handiling such a large amount of compressed data (500 GB nearly) with the limited resources for processing.
+* Handiling such a large amount of compressed data (256 GB nearly) with the limited resources for processing.
 * Using custom implementation when the data don't fit into ram.
 * Using parallel programming to inhance the speed for feature extraction.
+* Advanced feature extraction and feature selection techniques.
 
-## What's more to do??
-* Using bigram feature extractor for .bytes files.
-* Improving feature extraction for .asm files by using domain knowledge.
-   
-   
    
    
