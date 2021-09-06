@@ -21,15 +21,16 @@
 * Feature Selection.
      * I have used lightGBM feature importance for the feature selection method.
                
-Model : 
-    * All the machine learning models were trid for the classification task on .bytes and .asm files seperatly and later combining them to see the results.
-    * **LightGBM performed best giving LOGLOSS : 0.009.**
+* Model : 
+
+   * All the machine learning models were trid for the classification task on .bytes and .asm files seperatly and later combining them to see the results.
+   * Finally, <b>LightGBM performed best giving LOGLOSS : 0.009.</b>
   
 ## What I learnt from this task?
 
 * Handiling such a large amount of compressed data (256 GB nearly) with the limited resources for processing.
 * Using custom implementation when the data don't fit into ram.
-* Using **parallel programming** to inhance the speed for feature extraction.
+* Using <b>parallel programming</b> to inhance the speed for feature extraction.
 * Advanced feature extraction and feature selection techniques.
 
    
